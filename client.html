@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Playground</title>
+</head>
+<body>
+
+</body>
+<script>
+
+const ws = new WebSocket('ws://localhost:9898/');
+
+ws.onopen = function() {
+  let data ={
+    text: "Duy",
+    type: "Name"
+  }
+
+  let dataString = JSON.stringify(data);
+    console.log('WebSocket Client Connected');
+    ws.send(dataString);
+};
+
+ws.onmessage = function(e) {
+  console.log("Received: '" + e.data + "'");
+};
+
+function onSendmessage(){
+
+  let data ={
+    text: "Duy",
+    type: "Name"
+  }
+
+  let dataString = JSON.stringify(data);
+
+  ws.send(dataString);
+  console.log('send message to server')
+}
+
+
+
+</script>
+<body>
+  <button type="button" onclick="onSendmessage()">Send message</button>
+</body>
+</html>

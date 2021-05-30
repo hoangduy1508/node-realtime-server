@@ -1,0 +1,17 @@
+{
+  "name": "js-socket-examples",
+  "version": "1.0.0",
+  "description": "Some socket examples with Node.js and PubNub",
+  "main": "websocket-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node websocket-server.js"
+  },
+  "keywords": [],
+  "author": "Adam Bavosa <adamb@pubnub.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pubnub": "^4.24.4",
+    "websocket": "^1.0.29"
+  }
+}
